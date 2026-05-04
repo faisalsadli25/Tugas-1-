@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PORTOFOLIO || FAISAL</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body class="bg-gray-100 flex flex-col items-center min-h-screen">
-    <div class="flex items-center gap-6 p-4 max-w-[631px] h-[215px] border-none ">
+<body class="bg-gray-100 flex flex-col items-center ">
+    <main class="max-w-[1000px] mx-auto bg-white rounded-[30px] shadow-xl my-10 p-6 sm:p-10">
+
+    <div class="flex items-center gap-6 p-4 max-w-[631px] h-auto">
         <div class="relative border-4 border-yellow-400 rounded-full bg-yellow-200">
             <img src="profil faisal.png" alt="" class="border-8 border-white w-[215px] h-[215px] rounded-full ">
         </div>
@@ -16,28 +19,107 @@
         <p class="italic text-gray-500">store leader</p>
         </div>
     </div>
-
-    <section class="w-[634px] h-[142px] border-none mt-8">
-        <div class="flex justify-between items-center  p-4">
-            <p class="text-center font-semibold border-none w-[148px] h-[102px]">7 <br>years of work <br> experience</p>
-            <p class="text-center font-semibold w-[148px] h-[102px] border-none">10+ <br>completed <br> projects</p>
-            <p class="text-center font-semibold w-[148px] h-[102px] border-none">10 <br>satisfied <br> customer</p>
-
-        </div>
-    </section>
-
-    <section class="mt-5 border-none w-[618px] h-[80px] flex items-center gap-8  ">
-        <h1 class=" border-none w-[290px] h-[80px] text-center p-4 bg-yellow-400 rounded-lg font-bold text-xl cursor-pointer hover:bg-yellow-300">Download cv</h1>
-        <h1 class=" border-none w-[290px] h-[80px] text-center p-4 bg-slate-50 rounded-lg font-bold text-xl cursor-pointer hover:bg-slate-300">contact me</h1>
-    </section>
-
-    <section class="mt-5 border-none w-[760px] h-[132px]">
-        <div class="flex  items-center border-none shadow-inner w-[760px] h-[110px] bg-white rounded-3xl gap-8 p-2">
-        <h1 class="border-none w-[352px] h-[80px] text-center p-6 text-xl font-bold capitalize bg-gray-300 ">portofolio</h1>
-        <h1 class="border-none w-[352px] h-[80px] text-center p-6 font-bold text-xl capitalize">skills</h1>
-        </div>
-    </section>
-   
     
+    <section class="w-full  max-w-[634px] mx-auto  mt-8">
+        <div class="flex justify-between items-center  p-4">
+            <p class="text-center font-semibold w-[148px] h-[102px] capitalize text-gray-500">7 <br>years of work <br> experience</p>
+            <p class="text-center font-semibold w-[148px] h-[102px] capitalize text-gray-500">10+ <br>completed <br> projects</p>
+            <p class="text-center font-semibold w-[148px] h-[102px] capitalize text-gray-500">10 <br>satisfied <br> customers</p>
+
+        </div>
+    </section>
+
+    <section class="mt-5  w-full md:w-[618px] h-auto flex items-center gap-8  ">
+        <h1 class="  py-4 flex-1 text-center p-4 bg-yellow-400 rounded-lg font-bold text-xl cursor-pointer hover:bg-yellow-300 capitalize">Download cv</h1>
+        <h1 class=" py-4 flex-1 text-center p-4 bg-slate-50 rounded-lg font-bold text-xl cursor-pointer hover:bg-slate-300 capitalize"> <a href="https://wa.me/6281523601999" target="_blank">contact me</a></h1>
+    </section>
+
+    <!-- tab switcher -->
+    <section id="portofolio" class="mt-5 w-full md:w-[618px] mx-auto ">
+        <div class="flex bg-gray-50 p-1 rounded-2xl max-w-md mx-auto mb-10 border border-gray-100 gap-2">
+            <button id="btn-portofolio" onclick="switchTab('portofolio')" class="uppercase flex-1 bg-gray-300 py-4 font-bold duration-200 transition-all text-gray-900 rounded-xl shadow-sm hover:text-white hover:bg-gray-400">portofolio</button>
+            <button id="btn-skills" onclick="switchTab('skills')" class="uppercase flex-1 bg-gray-300 py-4 font-bold duration-200 transition-all text-gray-900 rounded-xl shadow-sm hover:text-white hover:bg-gray-400">skills</button>
+        </div>
+
+        <!-- konten portofolio -->
+         <div id="portofolio-content" class="hidden">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                 <div class="group bg-white border border-gray-300 rounded-2xl overflow-hidden hover:shadow-xl transition">
+                    <img src="Screenshot 2026-05-03 094335.png" alt="portofolio" class="w-full h-48 object-cover"><span class="text-gray-400 capitalize text-sm italic">portofolio</span>
+                 </div>
+                 <!-- card 2 -->
+                  <div class="group bg-white border border-gray-300 rounded-2xl overflow-hidden hover:shadow-xl transition">
+                    <img src="git.png" alt="" class="object-cover w-full h-48"> <span class="text-gray-400 capitalize text-sm italic">git push</span>
+                  </div>
+            </div>
+         </div>
+         <!-- konten skills -->
+         <div id="skills-content" class="block">
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                <div class="bg-blue-50 border border-blue-100 p-6 rounded-2xl text-center">
+                    <i class="fa-brands fa-html5 text-3xl text-orange-400"></i> <br>
+                    <span class="font-bold text-orange-700">HTML</span>
+                </div>
+
+                <div class="bg-blue-50 border border-blue-100 p-6 rounded-2xl text-center">
+                    <i class="fa-brands fa-php text-3xl text-purple-600"></i> <br>
+                    <span class="font-bold text-purple-500">PHP</span>
+                </div>
+
+                <div class="bg-blue-50 border border-blue-100 p-6 rounded-2xl text-center">
+                   <i class="fa-brands fa-git-alt text-3xl"></i> <br>
+                    <span class="font-bold text-gray-700">GIT</span>
+                </div>
+
+                <div class="bg-blue-50 border border-blue-100 p-6 rounded-2xl text-center">
+                   <i class="fa-solid fa-file-excel text-3xl text-green-500"></i> <br>
+                    <span class="font-bold text-green-700">EXCEL</span>
+                </div>
+            </div>
+         </div>
+    </section>
+
+    <footer class="mt-20 pt-20 border-t border-gray-100 text-center text-gray-400 text-sm">
+            &copy;; 2026 M Faisal Sadli. All rights reserved.
+        </footer>
+   
+    </main>
+    
+    <script>
+        function switchTab(tabName){
+            const portofolioContent = document.getElementById('portofolio-content');
+            const skillsContent = document.getElementById('skills-content');
+            const btnPortofolio = document.getElementById('btn-portofolio');
+            const btnSkills = document.getElementById('btn-skills');
+
+            if(tabName === 'portofolio'){
+                // tampilkan content portofolio
+                portofolioContent.classList.remove('hidden');
+                portofolioContent.classList.add('block');
+                // sembunyikan skills
+                skillsContent.classList.add('hidden');
+                skillsContent.classList.remove('block')
+
+                // ubah warna tombol(portofolio aktif)
+                btnPortofolio.classList.add('bg-gray-200','text-gray-800');
+                btnPortofolio.classList.remove('bg-white','text-gray-500');
+                btnSkills.classList.add('bg-white','text-gray-500');
+                btnSkills.classList.remove('bg-gray-200','text-gray-800');
+            }else{
+                // tampilkan skills
+                skillsContent.classList.remove('hidden');
+                skillsContent.classList.add('block');
+                portofolioContent.classList.add('hidden')
+                portofolioContent.classList.remove('block')
+
+                // tombol 
+                btnSkills.classList.add('bg-gray-200','text-gray-800');
+                btnSkills.classList.remove('bg-white','text-gray-500');
+                btnPortofolio.classList.add('bg-white','text-gray-500');
+                btnPortofolio.classList.remove('bg-gray-200','text-gray-800');
+            }
+        }
+    </script>
 </body>
 </html>
