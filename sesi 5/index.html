@@ -4,17 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PRODUK || SESI 5</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div id="container-produk">
+< class="bg-gray-100 p-6">
+    <div class="max-w-6xl mx-auto bg-green-500 p-6 rounded-lg shadow-md mb-4">
+        <h1 class="text-3xl font-bold mb-8  text-white">Katalog Smartphone</h1>
+    </div>
+    
+    <div class="filter-buttons flex flex-wrap justify-center gap-4 mb-8">
+        <button onclick="filterProducts('semua')" class="px-6 py-2 bg-green-600 text-wrap rounded-full font-semibold uppercase hover:bg-orange-400 hover:text-white hover:shadow-xl transition">Semua</button>
+        <button onclick="filterProducts('iphone')" class="px-6 py-2 bg-green-600 text-wrap rounded-full font-semibold uppercase hover:bg-orange-400 hover:text-white hover:shadow-xl transition">iphone</button>
+        <button onclick="filterProducts('samsung')" class="px-6 py-2 bg-green-600 text-wrap rounded-full font-semibold uppercase hover:bg-orange-400 hover:text-white hover:shadow-xl transition">samsung</button>
+        <button onclick="filterProducts('xiaomi')" class="px-6 py-2 bg-green-600 text-wrap rounded-full font-semibold uppercase hover:bg-orange-400 hover:text-white hover:shadow-xl transition">xiaomi</button>
     </div>
 
-    <div class="filter-buttons">
-        <button onclick="filterProducts('semua')">Semua</button>
-        <button onclick="filterProducts('iphone')">iphone</button>
-        <button onclick="filterProducts('samsung')">samsung</button>
-        <button onclick="filterProducts('xiaomi')">xiaomi</button>
+    <div id="container-produk" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
     </div>
+
+    <footer class="text-center mt-12  bg-green-500 p-4 rounded-lg shadow-md  text-white">
+        &copy; 2026 M Faisal Sadli. All rights reserved.</footer>
     
     <script src="main.js"></script>
 </body>

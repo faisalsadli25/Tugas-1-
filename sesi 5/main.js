@@ -23,24 +23,35 @@ let produk = [
     }
 ];
 
+    function tampilkanProduk(data){
     let produkContainer = document.getElementById("container-produk");
-    produk.forEach(function(item) {
+    produkContainer.innerHTML = "";
+
+    data.forEach(function(item) {
         let produkCard = document.createElement("div");
-        produkCard.classList.add("produk-card");
+        produkCard.className = "bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col"; //menambahkan kelas CSS untuk styling
 
         produkCard.innerHTML = `
-            <img src="${item.gambar}" alt="${item.nama}" style="width: 200px; height: 200px; object-fit:contain;">
-            <h2>${item.nama}</h2>
-            <h3>Rp ${item.harga.toLocaleString('id-ID')}</h3>
-            <p>${item.deskripsi}</p>
-            <small>Kategori: ${item.kategori}</small>
+        <div class = "p-6 flex justify-center bg-gray-50">
+            <img src="${item.gambar}" alt="${item.nama}" class="h-48 object-contain ">
+            </div>
+
+            <div class="p-6 flex flex-col flex-grow">
+            <span class ="text-xs font-bold uppercase text-blue-600 mb-1">${item.kategori}</span>
+            <h2 class="text-xl font-bold uppercase text-gray-800 mb-2">${item.nama}</h2>
+            <h3 class="text-lg font-bold text-green-600 mb-4">Rp ${item.harga.toLocaleString('id-ID')}</h3>
+            <p class="text-gray-600 text-sm line-clamp-3 flex-grow">${item.deskripsi}</p>
+            </div>
         `;
         produkContainer.appendChild(produkCard); //memasukkan atau menempelkan sebuha elemen anak(child) ke dalam sebuah elemen induk(parent)
-    })
+        
+    });
+    
+}
+
+tampilkanProduk(produk);
 
     function filterProducts(kategori){
-        produkContainer.innerHTML = "";
-
         let dataDisaring =[];
         if(kategori === "semua"){
             dataDisaring = produk;
@@ -49,6 +60,8 @@ let produk = [
                 return item.kategori === kategori;
             })
         }
+        tampilkanProduk(dataDisaring);
+    }
 
         dataDisaring.forEach(function(item) {
             let produkCard = document.createElement("div");
@@ -63,4 +76,5 @@ let produk = [
             `;
             produkContainer.appendChild(produkCard);
         });
-    }
+    
+    
